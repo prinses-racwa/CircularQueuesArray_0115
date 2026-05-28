@@ -49,11 +49,21 @@ public:
     void remove
     {
         //cek apakah antrian kosong
-        if (FRONT == - 1)
+        if (FRONT == -1)
         {
             cout << "Queues underflow\n";
             return;
         }
         cout << "\nThe element deleted from the queue is: " << queues_array[FRONT] << "\n";
-        
+
+        //cek jika antrian hanya memiliki satu element
+        if (FRONT == REAR)
+        {
+            FRONT = -1;
+            REAR = -1;
+        }
+        else
+        {
+            
+        }
     }

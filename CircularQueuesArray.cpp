@@ -14,4 +14,13 @@ public:
         FRONT = -1;
         REAR = -1;
     }
-    
+
+    void insert()
+    {
+        int num;
+        cout << "enter a number: ";
+        cin >> num;
+        cout << endl;
+
+        
+    }

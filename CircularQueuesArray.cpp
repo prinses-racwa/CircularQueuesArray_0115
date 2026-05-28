@@ -30,7 +30,7 @@ public:
         }
 
         //cek apakah antrian kosong
-        if (FRONT == - 1)
+        if (FRONT == -1)
         {
             FRONT = 0;
             REAR = 0;
@@ -76,4 +76,16 @@ public:
     {
         int FRONT_Position = FRONT;
         int REAR_Position = REAR;
+
+        //cek apakah antrian kosong
+        if (FRONT_Position == -1)
+        {
+            cout << "Queues is empty\n";
+            return;
+        }
+
+        cout << "\nElements in the queue are....\n";
+
+        
     }
+}

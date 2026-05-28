@@ -45,3 +45,8 @@ public:
         }
         queues_array[REAR] = num;
     }
+
+    void remove
+    {
+        
+    }

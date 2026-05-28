@@ -9,7 +9,7 @@ private:
     int queue_array[max];
 
 public:
-     Queues();
+     Queues()
     {
         FRONT = -1;
         REAR = -1;
@@ -43,7 +43,7 @@ public:
             else
                 REAR = REAR + 1;
         }
-        queues_array[REAR] = num;
+        queue_array[REAR] = num;
     }
 
     void remove()
@@ -54,7 +54,7 @@ public:
             cout << "Queues underflow\n";
             return;
         }
-        cout << "\nThe element deleted from the queue is: " << queues_array[FRONT] << "\n";
+        cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
         //cek jika antrian hanya memiliki satu element
         if (FRONT == REAR)
@@ -87,7 +87,7 @@ public:
         cout << "\nElements in the queue are....\n";
 
         //jika FRONT <= REAR, iterasi dari FRONT hingga REAR
-        if (FRONT_Position <= REAR_position)
+        if (FRONT_Position <= REAR_Position)
         {
             while (FRONT_Position <= REAR_Position)
             {
@@ -111,7 +111,7 @@ public:
             while (FRONT_Position <= REAR_Position)
             {
                 cout << queue_array[FRONT_Position] << "    ";
-                FFRONT_Position++;
+                FRONT_Position++;
             }
             cout << endl;
         }
@@ -119,3 +119,58 @@ public:
 };
 
 int main()
+{
+    Queues q;
+    char ch;
+
+    while (true)
+    {
+        try
+        {
+            {
+                cout << "Menu" << endl;
+                cout << "1. Implement insert operation" << endl;
+                cout << "2. Implement delete operation" << endl;
+                cout << "3. Display values" << endl;
+                cout << "4. Exit" << endl;
+                cout << "Enter your choice (1-4):";
+                cin >> ch;
+                cout << endl;
+
+                switch (ch)
+                {
+                case '1':
+                {
+                    q.insert();
+                    break;
+                }
+                case '2':
+                {
+                    q.remove();
+                    break;
+                }
+                case '3':
+                {
+                    q.display();
+                    break;
+                }
+                case '4':
+                {
+                    return 0;
+                }
+                default:
+                {
+                    cout << "Invalid option!!!" << endl;
+                    break;
+                }
+                }
+            }
+        }
+        catch (exception &e)
+        {
+            cout << "check for the values entered." << endl;
+        }
+        
+    }
+    return 0;
+}

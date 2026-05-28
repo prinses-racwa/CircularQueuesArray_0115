@@ -46,7 +46,7 @@ public:
         queues_array[REAR] = num;
     }
 
-    void remove
+    void remove()
     {
         //cek apakah antrian kosong
         if (FRONT == -1)
@@ -70,4 +70,10 @@ public:
             else
                 FRONT = FRONT + 1;
         }
+    }
+
+    void display()
+    {
+        int FRONT_Position = FRONT;
+        int REAR_Position = REAR;
     }
